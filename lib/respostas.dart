@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Respostas extends StatelessWidget {
+class Resposta extends StatelessWidget {
   final String _texto;
   final void Function() _onSelect;
 
-  const Respostas(this._texto, this._onSelect, {super.key});
+  const Resposta(this._texto, this._onSelect, {super.key});
 
   @override
   Widget build(BuildContext context) {
