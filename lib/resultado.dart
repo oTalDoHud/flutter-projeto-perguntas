@@ -1,9 +1,12 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class Resultado extends StatelessWidget {
   final int _pontuacaoTotal;
+  void Function() reiniciarQuestionario;
 
-  const Resultado(this._pontuacaoTotal, {Key? key}) : super(key: key);
+  Resultado(this._pontuacaoTotal, this.reiniciarQuestionario, {Key? key})
+      : super(key: key);
 
   String get fraseResultado {
     if (_pontuacaoTotal < 8) {
@@ -19,11 +22,36 @@ class Resultado extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "$fraseResultado \nNota: $_pontuacaoTotal",
-        style: const TextStyle(fontSize: 28),
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Center(
+          child: Text(
+            fraseResultado,
+            style: const TextStyle(fontSize: 28),
+          ),
+        ),
+        Center(
+          child: Text(
+            "Nota: $_pontuacaoTotal",
+            style: const TextStyle(fontSize: 20),
+          ),
+        ),
+        Container(
+          margin: const EdgeInsets.all(10),
+          child: TextButton(
+            onPressed: reiniciarQuestionario,
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.blue,
+              primary: Colors.white,
+            ),
+            child: const Text(
+              "Reiniciar teste",
+              style: TextStyle(fontSize: 18),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
