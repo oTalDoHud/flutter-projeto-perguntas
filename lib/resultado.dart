@@ -9,15 +9,21 @@ class Resultado extends StatelessWidget {
       : super(key: key);
 
   String get fraseResultado {
-    if (_pontuacaoTotal < 8) {
+    if (_pontuacaoTotal < 1) {
       return "Parabéns!";
-    } else if (_pontuacaoTotal < 12) {
+    } else if (_pontuacaoTotal < 2) {
       return "Você é bom!";
-    } else if (_pontuacaoTotal < 16) {
-      return "Impressionante!";
     } else {
       return "nível Jedi!";
     }
+  }
+
+  String get questaoQuestoes {
+    if(_pontuacaoTotal == 1){
+      return "questão";
+    }
+
+    return "questões";
   }
 
   @override
@@ -33,7 +39,7 @@ class Resultado extends StatelessWidget {
         ),
         Center(
           child: Text(
-            "Nota: $_pontuacaoTotal",
+            "Você acertou: $_pontuacaoTotal $questaoQuestoes!",
             style: const TextStyle(fontSize: 20),
           ),
         ),

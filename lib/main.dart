@@ -7,33 +7,62 @@ void main(List<String> args) => runApp(PerguntaAPP());
 class _PerguntaAppState extends State<PerguntaAPP> {
   var _perguntaSelecionada = 0;
   var _pontuacaoTotal = 0;
+  var _titulo = 'Pergunta 01';
 
   final List<Map<String, Object>> perguntas = const [
     {
-      "texto": "Qual sua cor favorita?",
+      "texto": "Qual o maior animal?",
       "respostas": [
-        {"texto": "Preto", "pontuacao": 10},
-        {"texto": "Vermelho", "pontuacao": 5},
-        {"texto": "Verde", "pontuacao": 3},
-        {"texto": "Branco", "pontuacao": 1},
+        {"texto": "Argentinosaurus", "pontuacao": 0},
+        {"texto": "Elefante", "pontuacao": 0},
+        {"texto": "Baleia-azul", "pontuacao": 1},
+        {"texto": "Patagotitan", "pontuacao": 0},
       ],
     },
     {
-      "texto": "Qual seu animal favorito?",
+      "texto": "Qual o planeta mais próximo do nosso sol?",
       "respostas": [
-        {"texto": "Coelho", "pontuacao": 10},
-        {"texto": "Cobra", "pontuacao": 5},
-        {"texto": "Elefante", "pontuacao": 3},
-        {"texto": "Leão", "pontuacao": 1},
+        {"texto": "Vênus", "pontuacao": 0},
+        {"texto": "Marte", "pontuacao": 0},
+        {"texto": "Mercúrio", "pontuacao": 1},
+        {"texto": "Júpiter", "pontuacao": 0},
       ],
     },
     {
-      "texto": "Qual seu instrutor favorito?",
+      "texto": "Qual país inventou a pólvora?",
       "respostas": [
-        {"texto": "Maria", "pontuacao": 10},
-        {"texto": "João", "pontuacao": 5},
-        {"texto": "Léo", "pontuacao": 3},
-        {"texto": "Pedro", "pontuacao": 1},
+        {"texto": "Holanda", "pontuacao": 0},
+        {"texto": "Inglaterra", "pontuacao": 0},
+        {"texto": "China", "pontuacao": 1},
+        {"texto": "India", "pontuacao": 0},
+      ],
+    },
+    {
+      "texto": "De quem é a famosa frase “Penso, logo existo”?",
+      "respostas": [
+        {"texto": "Platão", "pontuacao": 0},
+        {"texto": "Descartes", "pontuacao": 1},
+        {"texto": "Galileu Galilei", "pontuacao": 0},
+        {"texto": "Sócrates", "pontuacao": 0},
+      ],
+    },
+    {
+      "texto":
+          "Qual o nome do presidente do Brasil que ficou conhecido como Jango?",
+      "respostas": [
+        {"texto": "Jânio Quadros", "pontuacao": 0},
+        {"texto": "Jacinto Anjos", "pontuacao": 0},
+        {"texto": "Getúlio Vargas", "pontuacao": 0},
+        {"texto": "João Goulart", "pontuacao": 1},
+      ],
+    },
+    {
+      "texto": "Quais o menor e o maior país do mundo?",
+      "respostas": [
+        {"texto": "Vaticano e Rússia", "pontuacao": 1},
+        {"texto": "Nauru e China", "pontuacao": 0},
+        {"texto": "Malta e Estados Unidos", "pontuacao": 0},
+        {"texto": "São Marino e Índia", "pontuacao": 0},
       ],
     },
   ];
@@ -43,6 +72,11 @@ class _PerguntaAppState extends State<PerguntaAPP> {
       setState(() {
         _perguntaSelecionada++;
         _pontuacaoTotal += pontuacao;
+        if (temPerguntaSelecionada){
+          _titulo = "Pergunta  0${_perguntaSelecionada + 1}";
+        }else{
+          _titulo= "Resultado";
+        }
       });
     }
   }
@@ -51,6 +85,7 @@ class _PerguntaAppState extends State<PerguntaAPP> {
     setState(() {
       _perguntaSelecionada = 0;
       _pontuacaoTotal = 0;
+      _titulo = "Pergunta  0${_perguntaSelecionada + 1}";
     });
   }
 
@@ -61,7 +96,7 @@ class _PerguntaAppState extends State<PerguntaAPP> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-            appBar: AppBar(title: Text("Perguntas")),
+            appBar: AppBar(title: Text(_titulo)),
             body: temPerguntaSelecionada
                 ? Questionario(perguntas, _perguntaSelecionada, _responder,
                     temPerguntaSelecionada)
