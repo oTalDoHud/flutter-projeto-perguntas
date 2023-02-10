@@ -1,16 +1,23 @@
-# projeto_perguntas
+# Questionário Interativo!
 
-A new Flutter project.
+## Sobre o projeto
 
-## Getting Started
+O Questionário Interativo é uma aplicação Android/IOS desenvolvido em Flutter.
 
-This project is a starting point for a Flutter application.
+A aplicação consiste em diversas perguntas apresentadas
+em sequências e por último a sua nota e a opção de reiniciar a aplicação.
 
-A few resources to get you started if this is your first Flutter project:
+## Design
+## Aplicativo em execução
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Tecnologias utilizadas
+- Dart
+- Flutter
+- Git
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Autor
+Hudson Lucas Teles Vieira
+
+www.linkedin.com/in/otaldohud
+
+hudson.lucas.vieira@gmail.com
