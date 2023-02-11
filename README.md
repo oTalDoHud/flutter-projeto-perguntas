@@ -8,12 +8,10 @@ A aplicação consiste em diversas perguntas apresentadas
 em sequências e por último a sua nota e a opção de reiniciar a aplicação.
 
 ## Design
-
-<br>
-
+### Perguntas
 ![design_perguntas](https://github.com/oTalDoHud/flutter-projeto-perguntas/blob/master/assets/pergunta_01.png)
 <br><br>
-
+### Resultado
 ![design_resultado](https://github.com/oTalDoHud/flutter-projeto-perguntas/blob/master/assets/resultado.png)
 ## Aplicativo em execução
 
