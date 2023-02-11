@@ -7,13 +7,16 @@ O Questionário Interativo é uma aplicação Android/IOS desenvolvido em Flutte
 A aplicação consiste em diversas perguntas apresentadas
 em sequências e por último a sua nota e a opção de reiniciar a aplicação.
 
+## Aplicativo em execução
+### Clique no vídeo 👇
+[![app_em_excucao](https://img.youtube.com/vi/56QD-53HFxM/0.jpg)](https://www.youtube.com/watch?v=56QD-53HFxM&ab_channel=HudsonLucas)
+
 ## Design
 ### Perguntas
 ![design_perguntas](https://github.com/oTalDoHud/flutter-projeto-perguntas/blob/master/assets/pergunta_01.png)
 <br><br>
 ### Resultado
 ![design_resultado](https://github.com/oTalDoHud/flutter-projeto-perguntas/blob/master/assets/resultado.png)
-## Aplicativo em execução
 
 ## Tecnologias utilizadas
 - Dart
